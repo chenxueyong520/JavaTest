@@ -5,4 +5,5 @@ RUN rm -rf /usr/local/apache-tomcat-8.5.40/webapps/ROOT
 COPY target/*.war /usr/local/apache-tomcat-8.5.40/webapps/ROOT.war
 
 EXPOSE 8080
+ENV ASPNETCORE_URLS http://+:8080
 CMD ["/usr/local/apache-tomcat-8.5.40/bin/catalina.sh","run"]

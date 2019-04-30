@@ -1,3 +1,25 @@
+FROM centos
+#install jdk and tomcat 
+ADD jdk-8u211-linux-x64.tar.gz /usr/java/
+ADD apache-tomcat-8.5.40.tar.gz /usr/local/
+#jdk enviroment
+ENV JAVA_HOME=/usr/java/jdk1.8.0_211
+ENV JRE_HOME=/usr/java/jdk1.8.0_211/jre
+ENV CLASSPATH=$JAVA_HOME/lib:$JAVA_HOME/jre/lib
+ENV PATH=$JAVA_HOME/bin:$PATH
+EXPOSE 8080
+CMD ["/usr/local/apache-tomcat-8.5.40/bin/catalina.sh","run"]
+
+
+docker build -t 192.168.12.220/fitting/tomcat:latest .
+docker push 192.168.12.220/fitting/tomcat:latest
+
+
+
+
+
+
+
 ## ZrLog [![Build Status](https://travis-ci.org/94fzb/zrlog.svg?branch=master)](https://travis-ci.org/94fzb/zrlog) [![Apache License](http://img.shields.io/badge/license-apache2-orange.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0) 
 
 [中文](README.md) | [English](README.en-us.md)

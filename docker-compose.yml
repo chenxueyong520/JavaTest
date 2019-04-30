@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  JavaTest:
+    image: JavaTest
+    container_name: JavaTest
+    build:
+      context: .
+      dockerfile: Dockerfile

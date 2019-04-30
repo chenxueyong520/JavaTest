@@ -1,8 +1,8 @@
 FROM centos
 
 #install jdk and tomcat 
-ADD jdk-8u211-linux-x64.tar.gz /usr/java/
-ADD apache-tomcat-8.5.40.tar.gz /usr/local/
+ADD /usr/local/src/jdk-8u211-linux-x64.tar.gz /usr/java/
+ADD /usr/local/src/apache-tomcat-8.5.40.tar.gz /usr/local/
 
 #jdk enviroment
 ENV JAVA_HOME=/usr/java/jdk1.8.0_211

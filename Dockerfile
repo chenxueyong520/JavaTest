@@ -1,4 +1,5 @@
 FROM centos
+ARG source
 
 #install jdk and tomcat 
 ADD /usr/local/src/jdk-8u211-linux-x64.tar.gz /usr/java/

@@ -1,6 +1,0 @@
-FROM 192.168.12.220/fitting/tomcat:latest
-ARG source
-EXPOSE 8080
-WORKDIR /wwwroot
-ADD target/tale.jar tale.jar
-ENTRYPOINT ["java","-jar","tale.jar"]
